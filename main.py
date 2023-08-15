@@ -4,3 +4,5 @@ print("\tAtemtamemte: Los Profesores")
 print(
     "Tecnológico de Monterrey\n\nBienvenido al curso de Pensamiento Computacional para Ingeniería\n\n\tAtemtamemte: Los Profesores"
 )
+
+print("Bye")
