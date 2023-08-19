@@ -118,4 +118,4 @@ Nota: todas son variables que guardan una entrada con su tipo de dato respectivo
 
 ### Salida
 
-printable file => archivo .txt
+printable file => archivo.txt
