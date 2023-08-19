@@ -101,7 +101,7 @@ Nota: todas son variables que guardan una entrada con su tipo de dato respectivo
  21.1 Agregar hasta el final de la lista "emociones" el valor de la variable "temp".<br>
  21.2 Pedir al usuario que solo escriba una emoción y después de un enter, para asignarlo a la variable "temp".
  
- 22. Ciclar por cada elemento del arreglo "emociones", en cada ciclo remplazar cada elemento correspondiente por un arreglo que tiene como primer elemento la emoción/valor del elemento correspondiente a reemplazar y pedir por que el usuario siente la emoción correspondiente para que sea el último elemento del arreglo a insertar.  --- acortar esta muy largo
+ 22. Ciclar por cada elemento del arreglo "emociones", en cada ciclo remplazar cada elemento correspondiente por un arreglo que tiene como primer elemento la emoción/valor del elemento correspondiente a reemplazar y pedir por que el usuario siente la emoción correspondiente para que sea el último elemento del arreglo a insertar.  
  23. Agregar hasta al inicio de la lista anidada "emociones" un arreglo con los encabezados verticales "Emociones" y "Razón", en ese orden.
  24. Crear la variable "primera columna" y asignar un arreglo vació al mismo.
  25. Ciclar por cada celda (de arriba hacia abajo) de la primera columna de la matriz "emociones", en cada ciclo agregar la celda correspondiente de la primera columna en el final de la lista "primera columna".
