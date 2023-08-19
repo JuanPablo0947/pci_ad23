@@ -34,10 +34,10 @@ Sin nada mas, espero que lo disfrutes profesor y quizás te sea de utilidad.
 
 Descargar el archivo y correr en terminal con:
 
-
+```
 python diario.py
 
-
+```
 
 o abrir en tu IDE y dale el boton de play.
 
