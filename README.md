@@ -47,14 +47,14 @@ Responder a las preguntas que aparecen, el programa tiene instrucciones y no usa
 
 ### Entrada
 fecha => string<br>
-dia => string
-hora => string
-temp => string
-descripción desayuno => entero
-descripción comida => string
-descripción cena => string
-temp => int
-literal sin asignar => string
+dia => string<br>
+hora => string<br>
+temp => string<br>
+descripción desayuno => entero<br>
+descripción comida => string<br>
+descripción cena => string<br>
+temp => int<br>
+literal sin asignar => string<br>
 final description => string
 
 Nota: todas son variables que guardan una entrada con su tipo de dato respectivo excepto la que dice "literal sin asignar" que solo es pedir el input del usuario.
