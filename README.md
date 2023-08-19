@@ -46,7 +46,7 @@ Responder a las preguntas que aparecen, el programa tiene instrucciones y no usa
 #  [](https://github.com/JuanPablo0947/pci_ad23#pseudocodigo)Pseudocódigo
 
 ### Entrada
-fecha => string
+fecha => string<br>
 dia => string
 hora => string
 temp => string
