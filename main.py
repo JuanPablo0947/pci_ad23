@@ -62,7 +62,4 @@ print(f"Gramos de proteínas recomendadas: {proteinas_g} g")
 print(f"Gramos de carbohidratos recomendados: {carbohidratos_g} g") 
 print(f"Gramos de grasas recomendadas: {grasas_g} g") 
 
-"""
---------------------------------------------------------------------------------------------------------------------------------------------------------------------
-"""
 #Ambición final: Al final me gustaría correlacionar con el coeficiente de correlación los cuatro cálculos de cada ejemplo de arriba mostrado y crear una gráfica en el archivo de texto o generar una imagen que muestre lo dicho. 
