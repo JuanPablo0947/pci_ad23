@@ -1,92 +1,68 @@
-print("Tecnológico de Monterrey\n")
-print("Bienvenido al curso de Pensamiento Computacional para Ingeniería\n")
-print("\tAtemtamemte: Los Profesores")
-print(
-    "Tecnológico de Monterrey\n\nBienvenido al curso de Pensamiento Computacional para Ingeniería\n\n\tAtemtamemte: Los Profesores"
-)
+#EJEMPLOS EN PYTHON DE LAS OPERACIONES MATEMÁTICAS QUE USARE EN MI PROGRAMA 
 
-print("Bye")
+"""
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+""" 
+Informa al usuario si la cantidad de agua que tomaste en un día es lo ideal respecto a tu peso 
 
-#Funciones auxiliares
-def largest_width(array):
-    largest = -1
-    for i in array:
-        if (len(i) > largest):
-            largest = len(i)
-            answer = i
-    return len(answer)
+La fórmula es:  
+la cantidad ideal de líquido que debes de tomar por día = 30 ml * tu peso 
+""" 
+cantidad_vasos = int(input("Aproximadamente cuantos vasos de agua tomas al día? ")) 
+cantidad_real_ml = cantidad_vasos * 200 
+cantidad_ideal_de_liquido = 30 * 77 
+print("Agua que deberías de consumir al día: " + str(cantidad_ideal_de_liquido)) 
+print("Agua que consumes consumiste hoy: " + str(cantidad_real_ml)) 
 
+"""
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+#Que el usuario sepa que tanta satisfacción tuvo en su día actual de alimentación 
+puntaje_desayuno = float(input("Del 0 al 10, ¿cuánto disfrutaste tu desayuno? ")) 
+puntaje_comida = float(input("Del 0 al 10, ¿cuánto disfrutaste tu comida? ")) 
+puntaje_cena = float(input("Del 0 al 10, ¿cuánto disfrutaste tu cena? ")) 
+puntaje_promedio = (puntaje_desayuno + puntaje_comida + puntaje_cena) / 3 
+print("Tu promedio de disfrute es " + str(puntaje_promedio)) 
+ 
+"""
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+""" 
+Calcular tu estado de ánimo general con la fórmula NEV 
 
-def generate_spaces(num):
-    string = ""
-    for i in range(num + 1):
-        string = string + " "
-    return string
+El NEV (Net Emotional Value) mide las emociones positivas y negativas para entender que es lo que impulsa la acción de preferencia en una relación de corto y largo plazo, ya que algunas emociones generan respuestas a corto y otras a largo. 
 
+La fórmula del NEV es: 
+nev = total de emociones positivas - total de emociones negativas 
 
-printable_file = open("Diario.txt", "w")
+Digamos que hicimos los cálculos de todas las emociones ingresadas por el usuario—por referencia ver principal.py—y obtenemos un total de 18 emociones positivas contra 7 emociones negativas: 
+""" 
+total_emociones_pos = 18 
+total_emociones_neg = 7 
+nev = total_emociones_pos - total_emociones_neg 
+print("Tu valor emocional neto del dìa es: " + str(nev)) 
 
-fecha = input("Fecha: ")
-printable_file.write(fecha + ",")
+""" 
+Informarte si las proporciones nutricionales que tuviste en el día es lo ideal:
+Digamos que calculamos por una serie de procesos complejos utilizando la teoría del curso, las kilocalorías que el usuario idealmente debería consumir en un día, eso es, digamos, 2200 kilocalorías 
+""" 
+kilocalorias_ideales_al_dia = 2200 
 
-dia = input("Día: ")
-printable_file.write(" " + dia + ",")
+# Proporciones nutricionales recomendadas 
+porcentaje_carbohidratos = 0.55 
+porcentaje_grasas = 0.30 
+porcentaje_proteinas = 0.15 
 
-hora = input("Hora: ")
-printable_file.write(" " + hora + ".\n\n\n")
+proteinas_g = (calorias_ideales_al_dia * porcentaje_proteinas) / 4 #1 gramo de proteína = 4 kilocalorías 
+carbohidratos_g = (calorias_ideales_al_dia * porcentaje_carbohidratos) / 4 #1 gramo de carbohidrato = 4 kilocalorías 
+grasas_g = (calorias_ideales_al_dia *porcentaje_grasas) / 9 #1 gramo de grasa = 9 kilocalorías 
 
-temp = input("¿Desayunaste? ")
-if (temp == "Si" or temp == "si" or temp == "SI" or temp == "sI"):
-    descripcion_desa = input("¿Qué desayunaste? ")
-    printable_file.write("Desayuno:\n" + descripcion_desa + "\n\n\n")
-temp = input("¿Comiste? ")
-if (temp == "Si" or temp == "si" or temp == "SI" or temp == "sI"):
-    descripcion_comi = input("¿Qué comiste? ")
-    printable_file.write("Comida:\n" + descripcion_comi + "\n\n\n")
-temp = input("¿Cenaste? ")
-if (temp == "Si" or temp == "si" or temp == "SI" or temp == "sI"):
-    descripcion_cena = input("¿Qué cenaste? ")
-    printable_file.write("Cena:\n" + descripcion_cena + "\n\n\n")
+print(f"Gramos de proteínas recomendadas: {proteinas_g} g") 
+print(f"Gramos de carbohidratos recomendados: {carbohidratos_g} g") 
+print(f"Gramos de grasas recomendadas: {grasas_g} g") 
 
-temp = int(input("¿Cuántos snacks tuviste? Pon cero si no tuviste ninguno: "))
-if (temp > 0):
-    snacks = []
-    for i in range(1, temp + 1):
-        snacks.append(input(f"¿Qué cenaste en el snack {i}? "))
-        printable_file.write(f"Snack {i}:\n" + snacks[i - 1] + "\n\n\n")
-
-emociones = []
-print(
-    "Enlista las emociones o sentimientos que tuviste el día de hoy. Por cada emoción o sentimiento escrito da un enter. Al finalizar, solo da un enter final sin escribir nada más. ")
-temp = input("Guarda tu emoción o sentimiento: ")
-while (temp != ""):
-    emociones.append(temp)
-    temp = input("Guarda tu emoción o sentimiento: ")
-for i in emociones:
-    emociones[emociones.index(i)] = [i, input(f"¿Por qué te sentiste {i}? ")]
-emociones.insert(0, ["Emociones", "Razón"])
-
-first_column = []
-for i in range(0, len(emociones)):
-    first_column.append(emociones[i][0])
-largest_width = largest_width(first_column)
-
-string = ""
-for i in range(largest_width):
-    string = string + " "
-
-for row in range(len(emociones)):
-    if (len(emociones[row][0]) == largest_width):
-        printable_file.write(' '.join([str(a) for a in emociones[row]]) + '\n')
-    elif (len(emociones[row][0]) < largest_width):
-        printable_file.write(
-            generate_spaces(largest_width - len(emociones[row][0])).join([str(a) for a in emociones[row]]) + '\n')
-printable_file.write("\n\n")
-
-final_description = input("Sientete libre de escribir lo que quieras (recomendado para desahogarte): ")
-final_des = [(final_description[i:i + 54]) for i in range(0, len(final_description), 54)]
-printable_file.write("Descripción:\n")
-for i in final_des:
-    printable_file.write(i + "\n")
-
-printable_file.close()
+"""
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------
+"""
+#Ambición final: Al final me gustaría correlacionar con el coeficiente de correlación los cuatro cálculos de cada ejemplo de arriba mostrado y crear una gráfica en el archivo de texto o generar una imagen que muestre lo dicho. 
