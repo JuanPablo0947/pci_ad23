@@ -1,7 +1,7 @@
 # pci_ad23
 Repo para almacenar los ejercicios y ejemplos de clase de "Pensamiento Computacional para Ingeniería". Semestre AD23
 
-# TC1028.411 Proyecto de Juan Pablo R.
+# TC1028.411 Project from Juan Pablo Ramos.
 
 For the final delivery, the style of the PEP8 standard and convention will be applied to this project, as well as good industry practices seen throughout the course.
 
