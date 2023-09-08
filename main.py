@@ -60,7 +60,7 @@ def main():
 
     for row in range(len(emotions)):
         if len(emotions[row][0]) == largest_width:
-            #this if statement checks if the word at the cell located in the intersection of row (variable aka iterator) and first column is the largest word of the column; if yes, it will be the model for the space between columns to make an even-looking table being the only one with one necessary space.  
+            #this first part of the if statement checks if the word at the cell located in the intersection of row (variable aka iterator) and the first column is equally long to the longest word of the first column (aka the model); the model is the basis for the generated space between columns to make an even-looking table. The equally large words to the model and the model will be the minority of one needed space only inserted between the columns of the two-by-two matrix.   
             printable_file.write(" ".join([str(a) for a in emotions[row]]) + "\n")
         elif len(emotions[row][0]) < largest_width:
             printable_file.write(
