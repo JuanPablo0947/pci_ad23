@@ -36,7 +36,10 @@ def main():
         input("¿How many snacks you got through the day? Place 0 for not having any: ")
     )
     if temp > 0:
-        #this if statement checks if the user ate snacks throughout the day; if yes, it asks the user for what they got for the respective snack and stores it in the "Snacks" section after what the program saved previously.
+        """
+        This if statement checks if the user ate snacks throughout the day; if yes, it asks the user for what they got for the respective snack and stores it 
+        in the "Snacks" section after what the program saved previously.
+        """
         snacks = []
         for i in range(1, temp + 1):
             snacks.append(input(f"¿What did you got for snack {i}? "))
@@ -60,7 +63,12 @@ def main():
 
     for row in range(len(emotions)):
         if len(emotions[row][0]) == largest_width:
-            #this first part of the if statement checks if the word at the cell located in the intersection of row (variable aka iterator) and the first column is equally long to the longest word of the first column (aka the model); the model is the basis for the generated space between columns to make an even-looking table. The equally large words to the model and the model will be the minority of one needed space only inserted between the columns of the two-by-two matrix.   
+            """
+            This first part of the if statement checks if the word at the cell located in the intersection of row (variable aka iterator) and the first column 
+            is equally long to the longest word of the first column (aka the model); the model is the basis for the generated space between columns to make an 
+            even-looking table. The equally large words to the model and the model will be the minority of one needed space only inserted between the columns 
+            of the two-by-two matrix.   
+            """
             printable_file.write(" ".join([str(a) for a in emotions[row]]) + "\n")
         elif len(emotions[row][0]) < largest_width:
             printable_file.write(
