@@ -18,14 +18,17 @@ def main():
 
     temp = input("¿Did you have breakfast? ")
     if temp == "Yes" or temp == "yes" or temp == "YES":
+        #this if statement checks if the user got breakfast or not; if yes, asks the user for what they got for breakfast and stores it in a file.
         description_breakfast = input(f"¿What did you got for breakfast? ")
         printable_file.write("Breakfast:\n" + description_breakfast + "\n\n\n")
     temp = input("¿Did you have lunch? ")
     if temp == "Yes" or temp == "yes" or temp == "YES":
+        #this if statement checks if the user got lunch; if yes, it asks the user for what they got for lunch and stores it after what the program saved previously in it.
         description_lunch = input("¿What did you got for lunch? ")
         printable_file.write("Lunch:\n" + description_lunch + "\n\n\n")
     temp = input("¿Did you have dinner? ")
     if temp == "Yes" or temp == "yes" or temp == "YES":
+        #this if statement checks if the user got dinner; if yes, it asks the user for what they got for dinner and stores it after what the program saved previously in it.
         description_dinner = input("¿What did you got for dinner? ")
         printable_file.write("Dinner:\n" + description_dinner + "\n\n\n")
 
@@ -33,6 +36,7 @@ def main():
         input("¿How many snacks you got through the day? Place 0 for not having any: ")
     )
     if temp > 0:
+        #this if statement checks if the user ate snacks throughout the day; if yes, it asks the user for what they got for the respective snack and stores it in the "Snacks" section after what the program saved previously.
         snacks = []
         for i in range(1, temp + 1):
             snacks.append(input(f"¿What did you got for snack {i}? "))
@@ -56,6 +60,7 @@ def main():
 
     for row in range(len(emotions)):
         if len(emotions[row][0]) == largest_width:
+            #this if statement checks if the word at the cell located in the intersection of row (variable aka iterator) and first column is the largest word of the column; if yes, it will be the model for the space between columns to make an even-looking table being the only one with one necessary space.  
             printable_file.write(" ".join([str(a) for a in emotions[row]]) + "\n")
         elif len(emotions[row][0]) < largest_width:
             printable_file.write(
