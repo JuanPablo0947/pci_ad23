@@ -51,9 +51,11 @@ def main():
     )
     temp = input("Type with one word your emotion: ")
     while temp != "":
+        #asks the user an emotion until the emotion enters none or simply an enter
         emotions.append(temp)
         temp = input("Type with one word your emotion: ")
     for i in emotions:
+        #asks the user to enter the reason they feel that way and stores it in the same row as the emotion being dealt with
         emotions[emotions.index(i)] = [i, input(f"¿Why you feel {i}? ")]
     emotions.insert(0, ["Emotions", "Reason"])
 
@@ -62,6 +64,7 @@ def main():
     largest_width = get_largest_width(first_column)
 
     for row in range(len(emotions)):
+        #
         if len(emotions[row][0]) == largest_width:
             """
             This first part of the if statement checks if the word at the cell located in the intersection of row (variable aka iterator) and the first column 
